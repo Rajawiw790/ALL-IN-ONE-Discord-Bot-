@@ -5,13 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .",
+    "start": "node.",
     "postinstall": "npm dedupe"
   },
   "keywords": [
-    "Music", "Moderation", "Tickets", "Radio", "Games", "Giveaways", 
-    "Customisation", "Economy", "Leveling", "Invites", "Messages", 
-    "Utilities", "Suggestions", "Server Stats"
+    "Music",
+    "Moderation",
+    "Tickets",
+    "Radio",
+    "Games",
+    "Giveaways",
+    "Customisation",
+    "Economy",
+    "Leveling",
+    "Invites",
+    "Messages",
+    "Utilities",
+    "Suggestions",
+    "Server Stats"
   ],
   "author": "uo1428",
   "license": "ISC",
@@ -40,17 +51,4 @@
     "erela.js-deezer": "^1.0.7",
     "erela.js-facebook": "^1.0.4",
     "erela.js-spotify": "^1.2.0",
-    "express": "^4.18.2",
-    "ffmpeg-static": "^5.2.0",
-    "figlet": "^1.7.0",
-    "generate-password": "^1.7.1",
-    "giphy-api": "^2.0.2",
-    "groq-sdk": "^0.7.0",
-    "he": "^1.2.0",
-    "html-entities": "^2.5.2",
-    "is-hexcolor": "^1.0.0",
-    "isgd": "^1.1.3",
-    "jsdom": "^24.0.0",
-    "libsodium-wrappers": "^0.7.13",
-    "lyrics-finder": "^21.7.0",
-    "mathjs":
+    "express
