@@ -1,11 +1,11 @@
 {
   "name": "discordbot",
-  "version": "11.0.3",
+  "version": "11.0.4",
   "description": "Discord Bot is a bot with which you can run your entire server! With no less than 400+ commands",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node.",
+    "start": "node .",
     "postinstall": "npm dedupe"
   },
   "keywords": [
@@ -53,20 +53,4 @@
     "jsdom": "^24.0.0",
     "libsodium-wrappers": "^0.7.13",
     "lyrics-finder": "^21.7.0",
-    "mathjs": "^11.11.1",
-    "moment": "^2.30.1",
-    "moment-duration-format": "^2.3.2",
-    "moment-timezone": "^0.5.45",
-    "mongoose": "^8.2.4",
-    "ms": "^2.1.3",
-    "node-fetch": "^2.7.0",
-    "parse-ms": "^2.1.0",
-    "popcat-wrapper": "^1.5.4",
-    "pro.db": "^3.0.8",
-    "sourcebin": "^5.0.0",
-    "topgg-autoposter": "^2.0.1",
-    "undici": "^5.28.4",
-    "weather-js": "^2.0.0",
-    "ytdl-core": "^4.11.5"
-  }
-}
+    "mathjs":
