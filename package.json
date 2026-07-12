@@ -1,32 +1,25 @@
 {
   "name": "discordbot",
-  "version": "11.0.1",
+  "version": "11.0.3",
   "description": "Discord Bot is a bot with which you can run your entire server! With no less than 400+ commands",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node.",
+    "postinstall": "npm dedupe"
   },
   "keywords": [
-    "Music",
-    "Moderation",
-    "Tickets",
-    "Radio",
-    "Games",
-    "Giveaways",
-    "Customisation",
-    "Economy",
-    "Leveling",
-    "Invites",
-    "Messages",
-    "Utilities",
-    "Suggestions",
-    "Server Stats"
+    "Music", "Moderation", "Tickets", "Radio", "Games", "Giveaways", 
+    "Customisation", "Economy", "Leveling", "Invites", "Messages", 
+    "Utilities", "Suggestions", "Server Stats"
   ],
   "author": "uo1428",
   "license": "ISC",
   "engines": {
     "node": ">=18.0.0 <21.0.0"
+  },
+  "overrides": {
+    "undici": "^5.28.4"
   },
   "dependencies": {
     "@discordjs/voice": "^0.16.1",
@@ -36,7 +29,7 @@
     "axios": "^1.6.7",
     "canvacord": "^6.0.2",
     "chalk": "^4.1.2",
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.0.0",
     "discord-giveaways": "^6.0.1",
     "discord-image-generation": "^1.4.23",
     "discord.js": "^14.14.1",
@@ -72,6 +65,7 @@
     "pro.db": "^3.0.8",
     "sourcebin": "^5.0.0",
     "topgg-autoposter": "^2.0.1",
+    "undici": "^5.28.4",
     "weather-js": "^2.0.0",
     "ytdl-core": "^4.11.5"
   }
