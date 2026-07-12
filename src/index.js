@@ -1,7 +1,12 @@
+// Patch باش نحلو خطأ File is not defined ديال undici
+global.File = class File {};
+global.FormData = class FormData {};
+global.Blob = class Blob {};
+
 const app = require("express")();
 const Discord = require('discord.js');
 const chalk = require('chalk');
-require('dotenv').config({ path: './.env' }); // <- التعديل هنا
+require('dotenv').config({ path: './.env' });
 const axios = require('axios');
 const webhook = require("./config/webhooks.json");
 const config = require("./config/bot.js");
@@ -11,7 +16,7 @@ const webHooksArray = ['startLogs', 'shardLogs', 'errorLogs', 'dmLogs', 'voiceLo
 // Check if.env webhook_id and webhook_token are set
 if (process.env.WEBHOOK_ID && process.env.WEBHOOK_TOKEN) {
     for (const webhookName of webHooksArray) {
-        if(webhook[webhookName]){ // زدت هادي باش مايطيحش إلا كان webhook ناقص
+        if(webhook[webhookName]){
             webhook[webhookName].id = process.env.WEBHOOK_ID;
             webhook[webhookName].token = process.env.WEBHOOK_TOKEN;
         }
@@ -55,8 +60,8 @@ process.on('unhandledRejection', error => {
     if (errorStack.length > 950) errorStack = errorStack.slice(0, 950) + '... view console for details';
     
     const embed = new Discord.EmbedBuilder()
-       .setTitle(`🚨・Unhandled promise rejection`)
-       .addFields([
+      .setTitle(`🚨・Unhandled promise rejection`)
+      .addFields([
             {
                 name: "Error",
                 value: Discord.codeBlock(errorMsg),
@@ -78,11 +83,11 @@ process.on('unhandledRejection', error => {
 process.on('warning', warn => {
     console.warn("Warning:", warn);
     const embed = new Discord.EmbedBuilder()
-       .setTitle(`🚨・New warning found`)
-       .addFields([
+      .setTitle(`🚨・New warning found`)
+      .addFields([
             {
                 name: `Warn`,
-                value: `\`\`${warn}\`\``,
+                value: `\`\`\`${warn}\`\``,
             },
         ])
     warnLogs.send({
